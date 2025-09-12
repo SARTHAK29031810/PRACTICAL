@@ -1,0 +1,18 @@
+# 1. Write a program to find the roots of a quadratic equation
+a = float(input("Enter coefficient a: "))
+b = float(input("Enter coefficient b: "))
+c = float(input("Enter coefficient c: "))
+
+d = b*b - 4*a*c   # discriminant
+
+if d > 0:
+    root1 = (-b + (d**0.5)) / (2*a)
+    root2 = (-b - (d**0.5)) / (2*a)
+    print("Two real roots:", root1, "and", root2)
+elif d == 0:
+    root = -b / (2*a)
+    print("One real root:", root)
+else:
+    real = -b / (2*a)
+    imag = ((-d)**0.5) / (2*a)
+    print("Complex roots:", real, "+", imag, "i and", real, "-", imag, "i")
