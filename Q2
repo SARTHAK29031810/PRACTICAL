@@ -1,0 +1,42 @@
+# 2. Write a program to accept a number ‘n’ and
+# a. Check if ’n’ is prime 
+# b. Generate all prime numbers till ‘n’ 
+# c. Generate first ‘n’ prime numbers
+n = int(input("Enter a number: "))
+
+# a. Check if prime
+is_prime = True
+if n <= 1:
+    is_prime = False
+else:
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0:
+            is_prime = False
+            break
+print("Is prime?", is_prime)
+
+# b. All primes till n
+primes_till = []
+for i in range(2, n+1):
+    prime = True
+    for j in range(2, int(i**0.5)+1):
+        if i % j == 0:
+            prime = False
+            break
+    if prime:
+        primes_till.append(i)
+print("Primes till n:", primes_till)
+
+# c. First n primes
+first_primes = []
+num = 2
+while len(first_primes) < n:
+    prime = True
+    for j in range(2, int(num**0.5)+1):
+        if num % j == 0:
+            prime = False
+            break
+    if prime:
+        first_primes.append(num)
+    num += 1
+print("First n primes:", first_primes)
