@@ -1,0 +1,5 @@
+# 11. Write a function that prints a dictionary where the keys are 1–5 and values are cubes.
+d = {}
+for i in range(1, 6):
+    d[i] = i**3
+print(d)
