@@ -1,0 +1,16 @@
+# 10. Write a program to define a class Point with coordinates x and y as attributes.
+# Also define a method distance to calculate the distance between any two point objects.
+class Point:
+    def __init__(self, x, y):
+        self.x, self.y = x, y
+
+    def __str__(self):
+        return "(" + str(self.x) + "," + str(self.y) + ")"
+
+    def distance(self, other):
+        return ((self.x-other.x)**2 + (self.y-other.y)**2) ** 0.5
+
+p1 = Point(2, 3)
+p2 = Point(5, 7)
+print("Point1:", p1, "Point2:", p2)
+print("Distance:", p1.distance(p2))
