@@ -1,0 +1,8 @@
+# 6. Write a program to swap the first n characters of two strings.
+s1 = input("Enter first string: ")
+s2 = input("Enter second string: ")
+n = int(input("Enter n: "))
+
+new_s1 = s2[:n] + s1[n:]
+new_s2 = s1[:n] + s2[n:]
+print("After swap:", new_s1, new_s2)
