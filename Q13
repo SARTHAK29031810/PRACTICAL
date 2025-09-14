@@ -1,0 +1,10 @@
+# 13. Write a program to accept a name. Raise and handle exceptions if it has digits/special chars.
+name = input("Enter your name: ")
+
+try:
+    for ch in name:
+        if not ch.isalpha():
+            raise ValueError("Name should contain only alphabets.")
+    print("Valid name:", name)
+except ValueError as e:
+    print("Error:", e)
