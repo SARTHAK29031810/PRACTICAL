@@ -1,0 +1,16 @@
+# 5. Write a program to perform the following operations on a string
+# a. Find the frequency of a character in a string.
+# b. Replace a character by another character in a string.
+# c. Remove the first occurrence of a character from a string.
+# d. Remove all occurrences of a character from a string.
+s = input("Enter a string: ")
+
+ch = input("Enter character to count: ")
+print("Frequency:", s.count(ch))
+
+old = input("Character to replace: ")
+new = input("Replace with: ")
+print("After replace:", s.replace(old, new, 1))
+
+print("Remove first occurrence:", s.replace(ch, "", 1))
+print("Remove all occurrences:", s.replace(ch, ""))
