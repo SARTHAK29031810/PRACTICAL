@@ -1,0 +1,17 @@
+# 7. Write a function that accepts two strings and returns the indices of all the occurrences of the second string in the first string as a list. If not present then return -1.
+text = input("Enter main string: ")
+sub = input("Enter substring: ")
+
+indices = []
+start = 0
+while True:
+    pos = text.find(sub, start)
+    if pos == -1:
+        break
+    indices.append(pos)
+    start = pos + 1
+
+if indices:
+    print("Indices:", indices)
+else:
+    print(-1)
